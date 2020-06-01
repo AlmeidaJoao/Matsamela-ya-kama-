@@ -19,7 +19,6 @@ const d_icon = document.querySelector('#daily-icon')
 load.textContent = ''
 
 locationForm.addEventListener('submit', (e) => {  
-
   const lc = locationText.value
   const url = `http://localhost:3000/weather?location=${lc}`
   e.preventDefault()
@@ -34,7 +33,7 @@ locationForm.addEventListener('submit', (e) => {
       }
       load.textContent = data.location
   
-      temperature.textContent = `Tempatura actual: ${data.temperature}°C`
+      temperature.textContent = `Temperatura actual: ${data.temperature}°C`
       humidity.textContent = `Humidade: ${data.humidity}`
       wind_speed.textContent = `Velocidade do vento: ${data.wind_speed} m/s`
       c_description.textContent = data.description
