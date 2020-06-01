@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/images/weather.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Matsamela Ya Kama</title>
 
   <!-- Bootstrap Css -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -21,37 +22,53 @@
 </nav>
 
 <div class="container">
-  <div class="card-deck mb-3 text-center">
+  <!-- Input Field -->
+  <form class="weather">
+      <div class="input-group mb-3">
+        <input id="location-field" type="text" class="form-control" placeholder="Introduza a localizacao"  aria-describedby="button-addon2">
+          <div class="input-group-append">
+          <button  type="submit" class="btn btn-outline-secondary" type="button" id="button-addon2">Procurar</button>
+        </div>
+      </div>
+  </form>
+  
+  <p id="load"></p>
+  <!-- First Card -->
+  <p id="location"></p>
+  <div id="cards" class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Free</h4>
+        <h4 class="my-0 font-weight-normal">O tempo agora</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>10 users included</li>
-          <li>2 GB of storage</li>
-          <li>Email support</li>
-          <li>Help center access</li>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+        <!-- Icon -->
+        <img id="current-icon" src="http://openweathermap.org/img/wn/11d@2x.png">
+        <!-- Current Data -->
+        <h4 id="current-description"></h4>
+        <h4 id="temperature"></h4>
+        <h4 id="humidity"></h4>
+         <h4 id="pressure"></h4>
+        <h4 id="wind-speed"></h4>
       </div>
     </div>
+
+    <!-- Second Card -->
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Pro</h4>
+        <h4 class="my-0 font-weight-normal">O tempo do dia</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>20 users included</li>
-          <li>10 GB of storage</li>
-          <li>Priority email support</li>
-          <li>Help center access</li>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+        <!-- Icon -->
+        <img id="daily-icon" src="">
+        <!-- Current Data -->
+        <h4 id="daily-description"></h4>
+        <h4 id="max-temp"></h4>
+        <h4 id="min-temp"></h4>
       </div>
     </div>
   </div>
+
+  {{>footer}}
+  <script src="/js/app.js"></script>
 </body>
 </html>

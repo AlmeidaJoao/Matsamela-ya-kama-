@@ -6,8 +6,11 @@ const forecast = require('./forecast')
 
 const weather = (req, res) => {
   const location = req.query.location
-  if (!location) {
-    return 'Provide a query'
+
+  if (location === '') {
+    return res.send({
+      error: 'Forneca uma localizacao'
+    })
   }
 
   geocoords(location, (error, {latitude, longitude, location} = {}) => {
@@ -27,12 +30,14 @@ const weather = (req, res) => {
             })
           }
           res.send({
+            location,
             temperature, 
             pressure, 
             humidity, 
             wind_speed,
             description,
             icon, 
+            // Daily 
             min_temp, 
             max_temp, 
             daily_description,

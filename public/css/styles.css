@@ -6,9 +6,15 @@ html {
     font-size: 16px;
   }
 }
+body {
+  font-family: arial;
+  display: flex; 
+  flex-direction: column;
+}
 
 .container {
-  max-width: 960px;
+  margin: 200px auto;
+  flex-grow: 1;
 }
 
 .pricing-header {
@@ -17,4 +23,34 @@ html {
 
 .card-deck .card {
   min-width: 220px;
+}
+
+.mastfoot .inner p {
+  margin: auto;
+  text-align: center;
+}
+
+#load, #location {
+  margin: auto;
+  text-align: center; 
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.weather {
+  margin: auto;
+  max-width: fit-content;
+}
+
+#cards, #location {
+  visibility: hidden;
+}
+footer {
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px 0;
 }
