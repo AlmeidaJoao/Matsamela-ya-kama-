@@ -7,7 +7,7 @@ const forecast = require('./forecast')
 const weather = (req, res) => {
   const location = req.query.location
 
-  if (location === '') {
+  if (!location) {
     return res.send({
       error: 'Forneca uma localizacao'
     })
