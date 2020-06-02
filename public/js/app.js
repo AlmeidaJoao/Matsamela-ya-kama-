@@ -20,7 +20,7 @@ load.textContent = ''
 
 locationForm.addEventListener('submit', (e) => {  
   const lc = locationText.value
-  const url = `http://localhost:3000/weather?location=${lc}`
+  const url = `/weather?location=${lc}`
   e.preventDefault()
   
   load.textContent = 'Carregando...'

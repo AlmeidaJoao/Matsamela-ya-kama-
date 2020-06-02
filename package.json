@@ -4,8 +4,7 @@
   "description": "☁🌡💨⛅ Hello humans this is a weather app.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js -e js,hbs"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
