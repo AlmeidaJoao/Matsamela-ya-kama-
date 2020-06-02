@@ -1,7 +1,9 @@
 const axios = require('axios')
-
+const dotenv = require('dotenv');
+dotenv.config();
 const coordinates = (location, callback) => {
-  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?proximity=-74.70850,40.78375&access_token=pk.eyJ1IjoiYWxtZWlkYWpvYW8iLCJhIjoiY2thZnJjajM3MDFnZjMyb2IxODhiOWt5MyJ9.wAdWIB52knem9OIiip8ojA` 
+
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?proximity=-74.70850,40.78375&access_token=${process.env.MAP_BOX_API}` 
   axios.get(url).then(({data} = {}) => {
     
     if(data.features.length === 0 ) {

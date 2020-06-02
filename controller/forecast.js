@@ -1,7 +1,8 @@
 const axios = require('axios')
-
+const dotenv = require('dotenv');
+dotenv.config();
 const forecast = (latitude, longitude, callback) => {
-  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=31d77e6de28a4e87fb74085a14883381&lang=pt&units=metric`
+  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=${process.env.OPEN_WEATHER_API}&lang=pt&units=metric`
   axios.get(url)
   .then(({data} = {}) => {
     
