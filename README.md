@@ -17,6 +17,7 @@
 I built this project in order to put my knowledge into practise
 
 ## Screenshots
+![Main Screen](./screenshots/screenshot.png)
 
 ## Built With
 * Node.js - version 12.16.1
